@@ -1,0 +1,9 @@
+@startuml
+class A{
+operation1() void
+operation2() void
+}
+
+
+
+@enduml

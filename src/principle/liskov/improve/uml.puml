@@ -1,0 +1,18 @@
+@startuml
+class A{
+}
+class B{
+}
+
+A <|- B
+
+class Base{
+}
+class A1{
+}
+class B1{
+}
+Base <|- A1
+Base <|- B1
+A1 <|- B1
+@enduml
