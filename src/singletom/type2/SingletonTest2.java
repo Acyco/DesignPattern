@@ -1,13 +1,13 @@
-package singletom.type1;
+package singletom.type2;
 
 /**
- * 饿汉式（静态代码块）
+ * 饿汉式（静态变量）
  *
  * @author Acyco
  * @create 2020-01-08 00:20
  */
-public class SingletonTest1 {
-@SuppressWarnings("Duplicate")
+public class SingletonTest2 {
+
     public static void main(String[] args) {
 
         //测试
@@ -24,12 +24,13 @@ public class SingletonTest1 {
 
 class Singleton {
     //1. 构造器私有化 外部不能new
-    //2. 本类内部使用创建对象实例
-    private final static Singleton instance;
+    private Singleton() {
 
-    static {// 在表达代码块中，创建单例对象
-        instance = new Singleton();
     }
+
+    //2. 本类内部使用创建对象实例
+    private final static Singleton instance = new Singleton();
+
     //3. 提供一个公有的静态方法，返回实例对象
     public static Singleton getInstance() {
         return instance;
